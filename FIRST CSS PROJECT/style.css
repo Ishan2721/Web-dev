@@ -1,0 +1,140 @@
+/* * {
+  border-top: 10px solid #1098ad;
+} */ /*applies to all elements in the page*/
+
+body {
+  color: #444444;
+  font-family: sans-serif;
+
+  border-top: 10px solid #1098ad; /*does not apply to children */
+}
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+h1 {
+  /*color: blue;*/
+  font-size: 26px;
+  color: #1098ad;
+  text-transform: uppercase;
+  font-style: italic;
+} /*This whole thing is a rule and h1 is a selector and then comes declaration inside braces where color is an attribute and blue is the value */
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+li {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+/* footer p {
+  font-size: 16px;
+} */
+
+/* article header p {
+  font-style: italic;
+} */
+
+#author {
+  /*id selector is # */
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+.related-author {
+  /*class selector is . */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related {
+  list-style: none;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+}
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+/*Below are pseudo classes*/
+li:first-child {
+  font-weight: bold;
+} /*selects all the first elements of the all the lists(pseudo class)*/
+
+li:last-child {
+  font-style: italic;
+}
+
+li:nth-child(2) {
+  /* color: red; */
+}
+
+/* This won't work*/
+article p:first-child {
+  color: red;
+}
+
+/*styling links*/
+a:link {
+  /*targets anchor with href attributes*/
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  /*after clicking on the link what should be the color*/
+  color: #1098ad;
+}
+
+a:hover {
+  /*to change color when we hover the cursor over the link*/
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+/* nav a:link,
+nav p {
+  font-size: 18px;
+} */
+
+nav {
+  font-size: 18px;
+}
