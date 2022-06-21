@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      .el--1 {
+        background-color: blueviolet;
+      }
+      .el--2 {
+        background-color: orangered;
+      }
+      .el--3 {
+        background-color: green;
+        height: 150px;
+      }
+      .el--4 {
+        background-color: goldenrod;
+      }
+      .el--5 {
+        background-color: palevioletred;
+      }
+      .el--6 {
+        background-color: steelblue;
+      }
+      .el--7 {
+        background-color: yellow;
+      }
+      .el--8 {
+        background-color: crimson;
+      }
+
+      .container {
+        /* STARTER */
+        font-family: sans-serif;
+        background-color: #ddd;
+        font-size: 32px;
+        margin: 40px;
+        /*height of container will be equal to the height of tallest flex item8/
+        /* FLEXBOX */
+        display: flex;
+        align-items: center; /*vertical aligning*/
+        justify-content: flex-start; /*horizontal aligning*/
+        gap: 10px;
+      }
+      .el {
+        /*
+        default
+        flex-grow: 0;/*determines if elements are allowed to grow as large as they can or not*/
+        /* flex-shrink: 1;
+        flex-basis: auto; */
+        /*flex-basis: 200px; to specify width of flex items, contents larger than 100px gets extended here*/
+        /*flexbox is allowed to shrink elements so that by default they
+        fit the container, so flex-shrink set to 1 does.
+        So if there is not enough space in the container to fit the items
+        using the size that we described here then flexbox shrinks these
+        items by default*/
+        /* flex-basis: 200px;
+        flex-shrink: 0; */
+        flex: 0 0 200px; /*grow,shrink,basis*/
+        /*flex-grow: 1; elemets expand to fill empty space*/
+        flex: 1;
+      }
+      .el--1 {
+        align-self: flex-start;
+        /* order: 2; */
+        /*flex-grow: 2; space gets doubled of the available empty space*/
+      }
+      .el--5 {
+        align-self: stretch; /*default*/
+        order: 1; /*placed at last if number greater than 0*/
+      }
+
+      .el--6 {
+        order: -1; /*placed in front if number less than 0*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="el el--1">HTML</div>
+      <div class="el el--2">and</div>
+      <div class="el el--3">CSS</div>
+      <div class="el el--4">are</div>
+      <div class="el el--5">amazing</div>
+      <!-- <div class="el el--6">languages</div> -->
+      <!-- <div class="el el--7">to</div>
+      <div class="el el--8">learn</div> -->
+    </div>
+  </body>
+</html>
